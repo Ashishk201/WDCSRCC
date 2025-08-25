@@ -114,43 +114,60 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // --- Event Modal Logic ---
+    // --- Event & Team Modal Logic ---
     const viewMoreButtons = document.querySelectorAll('.view-more-btn');
-    const eventModal = document.getElementById('event-modal');
+    const modal = document.getElementById('modal');
     const modalContent = document.querySelector('.modal-content');
-    const closeEventModal = document.querySelector('.close-event-modal');
+    const closeModalBtn = document.querySelector('.close-modal');
 
-    if (eventModal) {
+    if (modal) {
+        const openModal = (title, image, description) => {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-image').src = image;
+            document.getElementById('modal-description').innerHTML = description;
+
+            modal.style.display = 'block';
+            setTimeout(() => {
+                modalContent.style.transform = 'translate(-50%, -50%) scale(1)';
+                modalContent.style.opacity = '1';
+            }, 10);
+        };
+
+        const closeModal = () => {
+            modalContent.style.transform = 'translate(-50%, -50%) scale(0.9)';
+            modalContent.style.opacity = '0';
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        };
+
         viewMoreButtons.forEach(button => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
                 const title = button.getAttribute('data-title');
                 const description = button.getAttribute('data-description');
                 const image = button.getAttribute('data-image');
-
-                document.getElementById('modal-title').textContent = title;
-                document.getElementById('modal-image').src = image;
-                document.getElementById('modal-description').textContent = description;
-
-                eventModal.style.display = 'block';
-                setTimeout(() => {
-                    modalContent.style.transform = 'translate(-50%, -50%) scale(1)';
-                    modalContent.style.opacity = '1';
-                }, 10);
+                openModal(title, image, description);
+            });
+        });
+        
+        const teamMembers = document.querySelectorAll('.team-member img');
+        teamMembers.forEach(member => {
+            member.addEventListener('click', () => {
+                const name = member.nextElementSibling.textContent;
+                const role = member.nextElementSibling.nextElementSibling.textContent;
+                const image = member.src;
+                const description = `
+                    <p><strong>Role:</strong> ${role}</p>
+                    <p>A dedicated and passionate member of our team, contributing significantly to our mission. [Add more detailed bio here].</p>
+                `;
+                openModal(name, image, description);
             });
         });
 
-        const closeModal = () => {
-            modalContent.style.transform = 'translate(-50%, -50%) scale(0.9)';
-            modalContent.style.opacity = '0';
-            setTimeout(() => {
-                eventModal.style.display = 'none';
-            }, 300);
-        };
-
-        closeEventModal.addEventListener('click', closeModal);
-        eventModal.addEventListener('click', (e) => {
-            if (e.target === eventModal) {
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
                 closeModal();
             }
         });

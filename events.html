@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Women's Development Cell, SRCC</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        /* --- Event Modal Styles --- */
+        .event-modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 2rem;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            opacity: 0;
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        }
+
+        .close-event-modal {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="index.html" class="logo">
+            <img src="https://static.wixstatic.com/media/685f9f_dd2cf743449448718f61e1a1cc8deb6c~mv2.png" alt="WDC SRCC Logo">
+        </a>
+        <div class="menu-toggle" id="menu-toggle">
+            <span>Menu</span>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="popup-menu" id="popup-menu">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <div class="popup-menu-content">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section class="events">
+            <div class="page-banner">
+                <h1>EVENTS</h1>
+            </div>
+            <div class="container" style="margin-top: 4rem;">
+                <div class="events-grid">
+                    <div class="event-item animate-on-scroll">
+                        <img src="https://static.wixstatic.com/media/c1de90_7176909cf4464cccb5a721e63cf9a443~mv2.jpg/v1/fill/w_300,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c1de90_7176909cf4464cccb5a721e63cf9a443~mv2.jpg" alt="Veerangana Event">
+                        <div class="event-item-content">
+                            <h3>VEERANGANA</h3>
+                            <p>Veerangana, the flagship event of the Women's Development Cell, is an empowering initiative celebrating and promoting women's strength and resilience. The event brings together inspiring speakers, interactive workshops, and engaging activities that foster leadership skills and promote gender equality among students.</p>
+                            <a href="#" class="btn view-more-btn" 
+                               data-title="VEERANGANA"
+                               data-image="https://static.wixstatic.com/media/c1de90_7176909cf4464cccb5a721e63cf9a443~mv2.jpg/v1/fill/w_800,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c1de90_7176909cf4464cccb5a721e63cf9a443~mv2.jpg"
+                               data-description="The event has featured remarkable speakers who left the audience with some key takeaways, like 'Be Fun, Fierce and Fabulous' and 'Being the best version of yourself'. The overwhelming response from the audience is a testament to the large success of the event and its sixth edition. Through this initiative, WDC, SRCC shall continue to strive for women empowerment and leadership.">View More</a>
+                        </div>
+                    </div>
+                    <div class="event-item animate-on-scroll">
+                        <img src="https://static.wixstatic.com/media/c1de90_33f351f1fe954de3b193fdd6f4c844d9~mv2.jpg/v1/fill/w_300,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c1de90_33f351f1fe954de3b193fdd6f4c844d9~mv2.jpg" alt="Period Pain Simulator">
+                        <div class="event-item-content">
+                            <h3>PERIOD PAIN SIMULATOR</h3>
+                            <p>An innovative and educational initiative designed to foster empathy and understanding by allowing participants to experience simulated menstrual cramps. This event aims to break down the stigma surrounding menstruation and create a more inclusive and supportive community for all genders.</p>
+                             <a href="#" class="btn view-more-btn"
+                                data-title="PERIOD PAIN SIMULATOR"
+                                data-image="https://static.wixstatic.com/media/c1de90_33f351f1fe954de3b193fdd6f4c844d9~mv2.jpg/v1/fill/w_800,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c1de90_33f351f1fe954de3b193fdd6f4c844d9~mv2.jpg"
+                                data-description="This unique event allows participants, regardless of gender, to experience a simulation of period pain, fostering a deeper understanding and empathy towards those who menstruate. It's a powerful tool for education and breaking taboos.">View More</a>
+                        </div>
+                    </div>
+                     <div class="event-item animate-on-scroll">
+                        <img src="https://static.wixstatic.com/media/c1de90_14b790b908f049e8b1aed2e0b4d7c356~mv2.jpg/v1/fill/w_300,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c1de90_14b790b908f049e8b1aed2e0b4d7c356~mv2.jpg" alt="Pad Distribution Drive">
+                        <div class="event-item-content">
+                            <h3>PAD DISTRIBUTION DRIVE</h3>
+                            <p>A community-focused initiative where we distribute sanitary napkins to underprivileged women and girls. This drive not only provides essential hygiene products but also includes awareness sessions on menstrual health, aiming to ensure dignity and health for every woman.</p>
+                             <a href="#" class="btn view-more-btn"
+                                data-title="PAD DISTRIBUTION DRIVE"
+                                data-image="https://static.wixstatic.com/media/c1de90_14b790b908f049e8b1aed2e0b4d7c356~mv2.jpg/v1/fill/w_800,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c1de90_14b790b908f049e8b1aed2e0b4d7c356~mv2.jpg"
+                                data-description="Our Pad Distribution Drives are a cornerstone of our community outreach. We partner with local NGOs to reach women in need, providing them with sanitary products and vital information about menstrual hygiene management.">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Event Modal -->
+    <div id="event-modal" class="event-modal">
+        <div class="modal-content">
+            <span class="close-event-modal">&times;</span>
+            <h2 id="modal-title">Event Title</h2>
+            <img id="modal-image" src="" alt="Event Image">
+            <p id="modal-description">Event description goes here.</p>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 by Women's Development Cell, SRCC. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

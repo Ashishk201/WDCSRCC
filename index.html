@@ -17,9 +17,19 @@
         <a href="index.html" class="logo">
             <img src="https://static.wixstatic.com/media/685f9f_dd2cf743449448718f61e1a1cc8deb6c~mv2.png" alt="WDC SRCC Logo">
         </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+            </ul>
+        </nav>
         <div class="menu-toggle" id="menu-toggle">
-            <span>Menu</span>
-            <div class="hamburger">
+            <span id="threeline">Menu</span>
+            <div class="hamburger" id="threeline">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -45,6 +55,15 @@
 
     <main>
         <section class="hero">
+            <div class="hero-bg-slider">
+                <div class="hero-bg-slide active" style="background-image: url('media/BG1.png');"></div>
+                <div class="hero-bg-slide" style="background-image: url('media/BG2.png');"></div>
+                <!-- <div class="hero-bg-slide" style="background-image: url('https://static.wixstatic.com/media/c1de90_938d349aa8544e2899dec3fd3e8292f9~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/c1de90_938d349aa8544e2899dec3fd3e8292f9~mv2.jpg');"></div> -->
+            </div>
+            <div class="hero-nav">
+                <button class="hero-nav-btn" id="heroPrevBtn"><</button>
+                <button class="hero-nav-btn" id="heroNextBtn">></button>
+            </div>
             <div class="hero-content container">
                 <h1>WOMEN'S DEVELOPMENT CELL</h1>
                 <div class="divider"></div>
@@ -69,15 +88,15 @@
             <div class="container animate-on-scroll">
                 <div class="stats-grid">
                     <div class="stat-item">
-                        <div class="stat-number">20+</div>
+                        <div class="stat-number" data-target="20">0+</div>
                         <div class="stat-text">sessions and workshops conducted</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">1000+</div>
+                        <div class="stat-number" data-target="1000">0+</div>
                         <div class="stat-text">participants engaged, fostering empowerment</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">750+</div>
+                        <div class="stat-number" data-target="750">0+</div>
                         <div class="stat-text">students educated on menstrual hygiene</div>
                     </div>
                 </div>
@@ -118,8 +137,8 @@
                     </div>
                 </div>
                 <div class="slider-nav">
-                    <button class="slider-btn" id="prevBtn">&larr;</button>
-                    <button class="slider-btn" id="nextBtn">&rarr;</button>
+                    <button class="slider-btn" id="prevBtn"><</button>
+                    <button class="slider-btn" id="nextBtn">></button>
                 </div>
             </div>
         </section>
@@ -131,13 +150,13 @@
                     <p>Email us at: <a href="mailto:womendevelopmentcellsrcc@gmail.com">womendevelopmentcellsrcc@gmail.com</a></p>
                     <div class="social-links">
                         <a href="https://www.instagram.com/wdc_srcc" target="_blank" aria-label="Instagram">
-                           <img src="https://static.wixstatic.com/media/11062b_cef3b719166a4815b446d4dcfcb6120d~mv2.png/v1/fill/w_28,h_28,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_cef3b719166a4815b446d4dcfcb6120d~mv2.png" alt="Instagram">
+                           <img src="media/instagram.png" alt="Instagram">
                         </a>
                         <a href="https://www.linkedin.com/company/women-development-cell-srcc/" target="_blank" aria-label="LinkedIn">
-                           <img src="https://static.wixstatic.com/media/11062b_b5690303a8ff470e9b1c03a24aff140b~mv2.png/v1/fill/w_28,h_28,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_b5690303a8ff470e9b1c03a24aff140b~mv2.png" alt="LinkedIn">
+                           <img src="media/linkedin.png" alt="LinkedIn">
                         </a>
                          <a href="https://linktr.ee/WDC_SRCC" target="_blank" aria-label="Linktree">
-                           <img src="https://static.wixstatic.com/media/685f9f_c51ba1c02d0b4897b210718c525778da~mv2.png/v1/fill/w_28,h_28,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/685f9f_c51ba1c02d0b4897b210718c525778da~mv2.png" alt="Linktree">
+                           <img src="media/linktree.png" alt="Linktree">
                         </a>
                     </div>
                 </div>
@@ -156,6 +175,16 @@
         </section>
 
     </main>
+
+    <!-- <div class="continuous-gallery">
+        <div class="gallery-track">
+            <img src="https://placehold.co/400x300/A52549/FFFFFF?text=Event+1" alt="Event 1">
+            <img src="https://placehold.co/400x300/77111E/FFFFFF?text=Workshop" alt="Workshop">
+            <img src="https://placehold.co/400x300/300B15/FFFFFF?text=Guest+Speaker" alt="Guest Speaker">
+            <img src="https://placehold.co/400x300/A52549/FFFFFF?text=Community+Drive" alt="Community Drive">
+            <img src="https://placehold.co/400x300/77111E/FFFFFF?text=Celebration" alt="Celebration">
+        </div>
+    </div> -->
 
     <footer class="main-footer">
         <p>&copy; 2025 by Women's Development Cell, SRCC. All rights reserved.</p>

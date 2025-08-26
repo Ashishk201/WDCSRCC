@@ -75,9 +75,8 @@ img {
     width: 100%;
     z-index: 1000;
     padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
     background-color: var(--light-color);
     box-shadow: var(--shadow);
     transition: top 0.3s ease;
@@ -88,6 +87,12 @@ img {
     height: auto;
 }
 
+/* By default (mobile view), hide the full navigation */
+.main-nav {
+    display: none;
+}
+
+/* By default (mobile view), the hamburger menu is visible */
 .main-header .menu-toggle {
     cursor: pointer;
     display: flex;
@@ -95,6 +100,7 @@ img {
     gap: 0.5rem;
     font-weight: bold;
     color: var(--dark-color);
+    margin-left: auto; /* Push hamburger to the right on mobile */
 }
 
 .main-header .hamburger {
@@ -171,16 +177,74 @@ img {
 .hero {
     margin-top: -85px; /* Counteract body padding */
     height: 100vh;
-    background: url('https://static.wixstatic.com/media/685f9f_96a8d4a1cf784e13ad76f65bd358a66a~mv2.png/v1/fill/w_1920,h_1080,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/685f9f_96a8d4a1cf784e13ad76f65bd358a66a~mv2.png') no-repeat center center/cover;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: left;
     color: var(--dark-color);
+    overflow: hidden;
 }
+
+.hero-bg-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-bg-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-bg-slide.active {
+    opacity: 1;
+}
+
+.hero-nav {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    right: 2rem;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.hero-nav-btn {
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    color: var(--dark-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    opacity: 0.5;
+}
+
+.hero-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+}
+
 
 .hero-content {
     max-width: 1000px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
@@ -399,9 +463,20 @@ img {
     text-decoration: underline;
 }
 
+.social-links{
+    display: flex;
+    align-items: center; /* This vertically aligns them in the middle */
+    gap: 0rem; /* This adds space between the logos */
+}
 .social-links a {
     margin-right: 1rem;
     font-size: 1.5rem;
+}
+
+
+.social-links a img {
+    width: 28px; /* This forces every logo to be the same width */
+    height: 28px; /* This forces every logo to be the same height */
 }
 
 .contact-form form {
@@ -466,7 +541,6 @@ img {
 }
 
 /* --- Team Page --- */
-/* --- Team Page --- */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -480,7 +554,7 @@ img {
     height: 220px;
     object-fit: cover;
     margin: 2rem auto 1rem;
-    border: 5px solid var(--bg-light-gray);
+    border: 5px solid var(--primary-color);
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
 }
@@ -491,7 +565,7 @@ img {
     height: 250px;
     object-fit: cover;
     margin: 2rem auto 1rem;
-    border: 5px solid var(--bg-light-gray);
+    border: 5px solid var(--secondary-color);
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
 }
@@ -618,7 +692,45 @@ img {
 }
 
 
-/* --- Responsive Design --- */
+
+/* --- Desktop Navigation Styles --- */
+@media (min-width: 769px) {
+    /* Show the full navigation on desktop */
+    .main-nav {
+        display: block;
+        margin-left: auto; /* KEY CHANGE: This pushes the nav to the far right */
+    }
+
+    /* Hide the hamburger menu on desktop */
+    .main-header .menu-toggle {
+        display: none;
+    }
+    
+    .main-nav ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+    .main-nav a {
+        font-weight: bold;
+        position: relative;
+    }
+    .main-nav a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+    }
+    .main-nav a:hover::after {
+        width: 100%;
+    }
+}
+
+
 @media (max-width: 768px) {
     body {
         padding-top: 70px;

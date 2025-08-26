@@ -32,6 +32,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Hero Slideshow Logic ---
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        const heroSlides = document.querySelectorAll('.hero-bg-slide');
+        const heroPrevBtn = document.getElementById('heroPrevBtn');
+        const heroNextBtn = document.getElementById('heroNextBtn');
+        let currentHeroSlide = 0;
+        let heroSlideInterval;
+
+        function showHeroSlide(index) {
+            heroSlides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextHeroSlide() {
+            currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+            showHeroSlide(currentHeroSlide);
+        }
+
+        function prevHeroSlide() {
+            currentHeroSlide = (currentHeroSlide - 1 + heroSlides.length) % heroSlides.length;
+            showHeroSlide(currentHeroSlide);
+        }
+
+        function startHeroSlideShow() {
+            heroSlideInterval = setInterval(nextHeroSlide, 7000); // Change slide every 7 seconds
+        }
+
+        heroNextBtn.addEventListener('click', () => {
+            nextHeroSlide();
+            clearInterval(heroSlideInterval);
+            startHeroSlideShow();
+        });
+
+        heroPrevBtn.addEventListener('click', () => {
+            prevHeroSlide();
+            clearInterval(heroSlideInterval);
+            startHeroSlideShow();
+        });
+
+        showHeroSlide(currentHeroSlide);
+        startHeroSlideShow();
+    }
+
     // --- Testimonial Slider Logic ---
     const slider = document.querySelector('.slider-container');
     if (slider) {
@@ -114,6 +162,38 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // --- Stats Counter Animation ---
+    const statsSection = document.querySelector('.stats');
+    if (statsSection) {
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = document.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        const target = +counter.getAttribute('data-target');
+                        const duration = 2000; // 2 seconds
+                        const stepTime = 20;
+                        const steps = duration / stepTime;
+                        const increment = target / steps;
+                        let current = 0;
+
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                clearInterval(timer);
+                                counter.innerText = target + '+';
+                            } else {
+                                counter.innerText = Math.ceil(current) + '+';
+                            }
+                        }, stepTime);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        statsObserver.observe(statsSection);
+    }
+
     // --- Event & Team Modal Logic ---
     const viewMoreButtons = document.querySelectorAll('.view-more-btn');
     const modal = document.getElementById('modal');
@@ -172,4 +252,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
 });

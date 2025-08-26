@@ -6,10 +6,75 @@
     <link rel="icon" type="image/x-icon" href="media/logo.png">
     <title>Projects | Women's Development Cell, SRCC</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+    /* New styles for the fancy projects page */
+    .page-banner {
+        margin-top: 0; 
+    }
+    .projects-section {
+        padding: 4rem 2rem;
+    }
+    .projects-grid {
+        max-width: 1200px;
+        margin: auto;
+        
+        /* --- CHANGE 1: Switched from Grid to Flexbox --- */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* This will center the cards, including the last one */
+
+        /* --- CHANGE 2: Reduced vertical spacing --- */
+        column-gap: 2.5rem; /* Horizontal space */
+        row-gap: 1.5rem;    /* Vertical space (reduced from 2.5rem) */
+    }
+    .project-card {
+        background-color: #FFFFFF;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        /* --- CHANGE 3: Set card width for Flexbox --- */
+        flex: 1 1 320px; /* Allows cards to grow/shrink with a base width of 320px */
+        max-width: 380px; /* Optional: prevents cards from getting too wide */
+    }
+    .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    .project-card-image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+    .project-card-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; 
+    }
+    .project-card-content h3 {
+        font-family: 'Secular One', sans-serif;
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+    .project-card-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        flex-grow: 1; 
+        margin-bottom: 1.5rem;
+    }
+    .project-card .btn {
+        align-self: flex-start;
+    }
+</style>
 </head>
 <body>
 
@@ -28,8 +93,8 @@
             </ul>
         </nav>
         <div class="menu-toggle" id="menu-toggle">
-            <span id="threeline">Menu</span>
-            <div class="hamburger" id="threeline">
+            <span>Menu</span>
+            <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -54,23 +119,59 @@
     </div>
 
     <main>
-        <section class="projects">
-            <div class="container">
-                <h2 class="animate-on-scroll" style="text-align: center; margin-bottom: 4rem; font-size: 3rem;">OUR PROJECTS</h2>
-                <div class="projects-grid">
-                    <div class="project-item animate-on-scroll">
-                        <h3>Project Aasha</h3>
-                        <p>A comprehensive initiative focused on spreading awareness about menstrual health and hygiene in underprivileged communities. We conduct workshops and distribute sanitary products.</p>
-                    </div>
-                    <div class="project-item animate-on-scroll">
-                        <h3>Project Synergy</h3>
-                        <p>Fostering collaboration between students and corporate leaders to mentor and guide young women in their career paths, focusing on leadership and skill development.</p>
-                    </div>
-                    <div class="project-item animate-on-scroll">
-                        <h3>Research Wing</h3>
-                        <p>Our dedicated research division that publishes papers and articles on pertinent gender-related issues, contributing to academic discourse and policy-making.</p>
+        <div class="page-banner">
+            <h1>OUR PROJECTS</h1>
+        </div>
+
+        <section class="projects-section">
+            <div class="projects-grid">
+
+                <div class="project-card animate-on-scroll">
+                    <img src="https://static.wixstatic.com/media/c1de90_aa460ae02b3a4917b66522d0a229a9a3~mv2.jpg/v1/fill/w_868,h_614,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c1de90_aa460ae02b3a4917b66522d0a229a9a3~mv2.jpg" alt="Women in a community session for Project Aasha" class="project-card-image">
+                    <div class="project-card-content">
+                        <h3>Project Code Red Alert</h3>
+                        <p>At WDC, SRCC, this flagship initiative tackles one of the most overlooked aspects of student well-being, menstrual health. Through interactive workshops, communication modules, and social media campaigns, we’re dismantling stigma and normalizing conversations around periods for school-going children. And we’re not stopping there; we’re expanding this change to factory floors, ensuring every woman gets access to awareness and dignity.</p>
+                        <a href="#" class="btn">View More</a>
                     </div>
                 </div>
+
+                <div class="project-card animate-on-scroll">
+                    <img src="https://static.wixstatic.com/media/c1de90_dfe71fcf34a5465d833d4ea7bd346ec1~mv2.png/v1/crop/x_96,y_0,w_126,h_172/fill/w_176,h_241,al_c,lg_1,q_85,enc_avif,quality_auto/images.png" alt="Mentorship session for Project Synergy" class="project-card-image">
+                    <div class="project-card-content">
+                        <h3>Project Synergy</h3>
+                        <p>Through Synergy, we channel skills in marketing, finance, and operations into consulting and HR live projects that drive social change. By partnering with organizations like Ahanaa Heritage Foundation and Aspire For Her, we merge professional expertise with purpose, empowering initiatives dedicated to women’s development.</p>
+                        <a href="#" class="btn">View More</a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <img src="https://placehold.co/600x400/300B15/FFFFFF?text=Project+Saanjh" alt="Students conducting research" class="project-card-image">
+                    <div class="project-card-content">
+                        <h3>Project Saanjh</h3>
+                        <p>Saanjh is our umbrella project under which meaningful initiatives take shape—free pad distribution drives, self-defense workshops, book donations, visits to old-age homes, and skill enhancement programs. Each effort under Saanjh is a thread weaving stronger communities and brighter futures.</p>
+                        <a href="#" class="btn">View More</a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <img src="https://placehold.co/600x400/300B15/FFFFFF?text=Project+Udaan" alt="Students conducting research" class="project-card-image">
+                    <div class="project-card-content">
+                        <h3>Project Udaan</h3>
+                        <p>Our annual online event brings together speaker sessions and thought-provoking competitions—from case challenges to interactive discussions—designed to ignite young minds. Udaan is where learning meets leadership, and students get the wings to rise.</p>
+                        <a href="#" class="btn">View More</a>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <img src="https://placehold.co/600x400/300B15/FFFFFF?text=Project+Malkin" alt="Students conducting research" class="project-card-image">
+                    <div class="project-card-content">
+                        <h3>Project malkin</h3>
+                        <p>Through Synergy, we channel skills in marketing, finance, and operations into consulting and HR live projects that drive social change. By partnering with organizations like Ahanaa Heritage Foundation and Aspire For Her, we merge professional expertise with purpose, empowering initiatives dedicated to women’s development.</p>
+                        <a href="#" class="btn">View More</a>
+                    </div>
+                </div>
+
+
             </div>
         </section>
     </main>

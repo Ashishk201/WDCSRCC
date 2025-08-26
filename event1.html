@@ -3,74 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VEERANGANA | Women's Development Cell, SRCC</title>
-    <link rel="icon" type="image/x-icon" href="media/logo.png">
+    <title>Event: Rise Above the Ribbon</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        /* Styles specific to this layout */
+        body { background-color: #F2EEE5; }
+        .event-page-content { padding: 4rem 2rem; }
+        .container { max-width: 1000px; margin: auto; }
+        .main-title { font-family: 'Secular One', sans-serif; font-size: 3.5rem; text-align: center; color: #A52549; margin-bottom: 5rem; }
+        .event-section { display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2rem; margin-bottom: 6rem; position: relative; }
+        .event-image img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .event-text { background-color: #A52549; color: #FFFFFF; padding: 2rem; border-radius: 8px; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        .event-section.right-align .event-text { grid-column: 2 / 3; grid-row: 1 / 2; z-index: 2; transform: translateX(-60px); }
+        .event-section.right-align .event-image { grid-column: 1 / 2; grid-row: 1 / 2; }
+        .event-section.left-align .event-text { grid-column: 1 / 2; grid-row: 1 / 2; z-index: 2; transform: translateX(60px); }
+        .event-section.left-align .event-image { grid-column: 2 / 3; grid-row: 1 / 2; }
+        .event-text h2 { font-family: 'Secular One', sans-serif; margin-top: 0; font-size: 1.8rem; }
+        .final-text { text-align: center; font-size: 1.1rem; line-height: 1.8; max-width: 800px; margin: 4rem auto 0; }
+        @media (max-width: 768px) {
+            .event-section { grid-template-columns: 1fr; }
+            .event-section.right-align .event-text, .event-section.left-align .event-text { transform: none; grid-column: auto; grid-row: auto; }
+            .event-section.right-align .event-image { grid-column: auto; grid-row: auto; order: -1; }
+        }
+    </style>
 </head>
 <body>
-
     <header class="main-header">
         <a href="index.html" class="logo">
             <img src="https://static.wixstatic.com/media/685f9f_dd2cf743449448718f61e1a1cc8deb6c~mv2.png" alt="WDC SRCC Logo">
         </a>
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="publications.html">Publications</a></li>
+                <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li>
             </ul>
         </nav>
         <div class="menu-toggle" id="menu-toggle">
-            <span id="threeline">Menu</span>
-            <div class="hamburger" id="threeline">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <span>Menu</span><div class="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
-
     <div class="popup-menu" id="popup-menu">
         <div class="close-btn" id="close-btn">&times;</div>
-        <div class="popup-menu-content">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="team.html">Our Team</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="popup-menu-content"><nav><ul>
+            <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li>
+        </ul></nav></div>
     </div>
 
-    <main>
-        <section class="projects">
-            <div class="container">
-                <h2 class="animate-on-scroll" style="text-align: center; margin-bottom: 4rem; font-size: 3rem;">VEERANGANA</h2>
-                <div class="projects-grid">
-                    <div class="project-item animate-on-scroll">
-                        <h3>VEERANGANA</h3>
-                        <p>Veerangana, the flagship event of the Women's Development Cell, is an empowering initiative celebrating and promoting women's strength and resilience. The event brings together inspiring speakers, interactive workshops, and engaging activities that foster leadership skills and promote gender equality among students.</p>
-                    </div>
+    <main class="event-page-content">
+        <div class="container">
+            <h1 class="main-title">RISE ABOVE THE RIBBON</h1>
+            <div class="event-section right-align">
+                <div class="event-text">
+                    <h2>22nd October 2024</h2>
+                    <p>In contribution to the Breast Cancer Awareness Month, WDC SRCC organized the Rise Above the Ribbon Seminar, featuring Dr. Deepika Chauhan. The seminar included an engaging discussion on the small steps one can take toward better health, including how to avoid carcinogenic elements.</p>
+                </div>
+                <div class="event-image">
+                    <img src="https://placehold.co/600x400/300B15/FFFFFF?text=Seminar+Photo" alt="Event seminar photo">
                 </div>
             </div>
-        </section>
+            <div class="event-section left-align">
+                <div class="event-text">
+                    <h2>Impact & Outreach</h2>
+                    <p>Dr. Chauhan also emphasized that breast cancer was not discriminatory based on gender. This seminar marked the conclusion of Breast Cancer Awareness Month, ending the month with maximum awareness dissemination among students who attended both online and offline.</p>
+                </div>
+                <div class="event-image">
+                    <img src="https://placehold.co/600x400/77111E/FFFFFF?text=Audience+Photo" alt="Students attending the event">
+                </div>
+            </div>
+            <div class="final-text">
+                <h2>Concluding Thoughts</h2>
+                <p>Add your summary or final thoughts about the event here. This is a great space to talk about the overall success, feedback received, or future plans related to this initiative.</p>
+            </div>
+        </div>
     </main>
 
     <footer class="main-footer">
         <p>&copy; 2025 by Women's Development Cell, SRCC. All rights reserved.</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

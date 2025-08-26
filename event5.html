@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: Period Pain Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        /* Styles specific to this layout */
+        body { background-color: #F2EEE5; }
+        .event-page-content { padding: 4rem 2rem; }
+        .container { max-width: 1100px; margin: auto; text-align: center; }
+        .main-title { font-family: 'Secular One', sans-serif; font-size: 3.5rem; color: #A52549; margin-bottom: 4rem; }
+        .quote-section { margin: 0 auto 4rem auto; max-width: 800px; }
+        blockquote { font-family: 'Secular One', sans-serif; font-size: 2.2rem; line-height: 1.4; color: #77111E; border-left: 5px solid #A52549; padding-left: 2rem; text-align: left; margin: 0; }
+        cite { display: block; text-align: left; margin-top: 1rem; padding-left: 2.5rem; font-style: normal; font-weight: bold; }
+        .description-text { text-align: center; max-width: 800px; margin: 0 auto 4rem auto; font-size: 1.1rem; line-height: 1.7; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .gallery-grid img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .gallery-grid img:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo"><img src="https://static.wixstatic.com/media/685f9f_dd2cf743449448718f61e1a1cc8deb6c~mv2.png" alt="WDC SRCC Logo"></a>
+        <nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav>
+        <div class="menu-toggle" id="menu-toggle"><span>Menu</span><div class="hamburger"><span></span><span></span><span></span></div></div>
+    </header>
+    <div class="popup-menu" id="popup-menu">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <div class="popup-menu-content"><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav></div>
+    </div>
+
+    <main class="event-page-content">
+        <div class="container">
+            <h1 class="main-title">Period Pain Simulator</h1>
+            <div class="quote-section">
+                <blockquote>"Feeling is believing. This initiative is a monumental step towards building empathy and understanding what half the population goes through."</blockquote>
+                <cite>— Anjali Sharma, Student Participant</cite>
+            </div>
+            <div class="description-text">
+                <p>Our Period Pain Simulator event aimed to break down stigmas and foster empathy. By allowing participants of all genders to experience a simulation of menstrual cramps, we opened up a powerful dialogue about an often-taboo subject. The event was a huge success, drawing large crowds and starting important conversations across campus.</p>
+            </div>
+            <div class="gallery-grid">
+                <img src="https://placehold.co/500x350/A52549/FFFFFF?text=Participant+1" alt="Student trying the simulator">
+                <img src="https://placehold.co/500x350/77111E/FFFFFF?text=Team+Explaining" alt="WDC team explaining the device">
+                <img src="https://placehold.co/500x350/300B15/FFFFFF?text=Group+Reaction" alt="Group of students reacting">
+            </div>
+        </div>
+    </main>
+    
+    <footer class="main-footer">
+        <p>&copy; 2025 by Women's Development Cell, SRCC. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

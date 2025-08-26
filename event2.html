@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: Veerangana</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        /* Styles specific to this layout */
+        body { background-color: #F2EEE5; }
+        .event-page-content { padding: 4rem 2rem; }
+        .container { max-width: 1200px; margin: auto; }
+        .main-title { font-family: 'Secular One', sans-serif; font-size: 3.5rem; text-align: center; color: #A52549; margin-bottom: 2rem; }
+        .intro-text { text-align: center; max-width: 700px; margin: 0 auto 4rem auto; font-size: 1.1rem; line-height: 1.8; }
+        .photo-grid { display: grid; gap: 15px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-auto-rows: 250px; }
+        .grid-item { overflow: hidden; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .grid-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+        .grid-item:hover img { transform: scale(1.05); }
+        .v-stretch { grid-row: span 2; }
+        .h-stretch { grid-column: span 2; }
+        .more-info { text-align: left; max-width: 800px; margin: 4rem auto 0; line-height: 1.8; }
+        .more-info h2 { font-family: 'Secular One', sans-serif; color: #77111E; }
+        @media (max-width: 768px) { .h-stretch { grid-column: span 1; } }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo"><img src="https://static.wixstatic.com/media/685f9f_dd2cf743449448718f61e1a1cc8deb6c~mv2.png" alt="WDC SRCC Logo"></a>
+        <nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav>
+        <div class="menu-toggle" id="menu-toggle"><span>Menu</span><div class="hamburger"><span></span><span></span><span></span></div></div>
+    </header>
+    <div class="popup-menu" id="popup-menu">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <div class="popup-menu-content"><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav></div>
+    </div>
+
+    <main class="event-page-content">
+        <div class="container">
+            <h1 class="main-title">VEERANGANA</h1>
+            <p class="intro-text">Veerangana, the flagship event of the Women's Development Cell, is an empowering initiative celebrating women's strength and resilience. The event brings together inspiring speakers and interactive workshops.</p>
+            <div class="photo-grid">
+                <div class="grid-item v-stretch"><img src="https://placehold.co/600x1200/A52549/FFFFFF?text=Guest+Speaker" alt="Guest speaker at the event"></div>
+                <div class="grid-item"><img src="https://placehold.co/600x600/300B15/FFFFFF?text=Panel+1" alt="Screenshot of a virtual panel"></div>
+                <div class="grid-item h-stretch"><img src="https://placehold.co/1200x600/77111E/FFFFFF?text=Team+Photo" alt="Team members during the event"></div>
+                <div class="grid-item"><img src="https://placehold.co/600x600/300B15/FFFFFF?text=Panel+2" alt="Screenshot of a virtual panel"></div>
+                <div class="grid-item"><img src="https://placehold.co/600x600/A52549/FFFFFF?text=Audience+Interaction" alt="Audience members"></div>
+                <div class="grid-item"><img src="https://placehold.co/600x600/A52549/FFFFFF?text=Audience+Interaction" alt="Audience members"></div>
+            </div>
+            <div class="more-info">
+                <h2>Behind the Scenes</h2>
+                <p>This is the perfect spot to add more context. You can describe the planning process, share anecdotes from the speakers, or detail the topics that were covered in the panel discussions. This helps visitors get a deeper understanding of the event's impact beyond the photos.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 by Women's Development Cell, SRCC. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

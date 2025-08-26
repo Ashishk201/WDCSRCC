@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: Annual Symposium</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        /* Styles specific to this layout */
+        body { background-color: #F2EEE5; }
+        .event-page-content { padding: 4rem 2rem; }
+        .container { max-width: 900px; margin: auto; }
+        .main-title { font-family: 'Secular One', sans-serif; font-size: 3.5rem; text-align: center; color: #A52549; margin-bottom: 1rem; }
+        .intro-text { text-align: center; max-width: 700px; margin: 0 auto 4rem auto; font-size: 1.1rem; line-height: 1.8; }
+        .timeline { position: relative; padding: 2rem 0; }
+        .timeline::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 4px; height: 100%; background-color: #A52549; }
+        .timeline-item { padding: 2rem; position: relative; width: 50%; margin-bottom: 2rem; }
+        .timeline-item::after { content: ''; position: absolute; top: 32px; width: 20px; height: 20px; background-color: #F2EEE5; border: 4px solid #A52549; border-radius: 50%; z-index: 1; }
+        .timeline-item:nth-child(odd) { left: 0; padding-right: 40px; text-align: right; }
+        .timeline-item:nth-child(even) { left: 50%; padding-left: 40px; text-align: left; }
+        .timeline-item:nth-child(odd)::after { right: -14px; }
+        .timeline-item:nth-child(even)::after { left: -14px; }
+        .timeline-content { background-color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .timeline-time { font-weight: bold; color: #77111E; font-size: 1.1rem; }
+        .timeline-title { font-family: 'Secular One', sans-serif; font-size: 1.5rem; margin: 0.5rem 0; }
+        @media (max-width: 768px) {
+            .timeline::before { left: 10px; }
+            .timeline-item, .timeline-item:nth-child(even) { width: 100%; left: 0; padding-left: 40px; text-align: left; }
+            .timeline-item:nth-child(odd) { padding-right: 0; }
+            .timeline-item::after, .timeline-item:nth-child(even)::after { left: -4px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo"><img src="https://static.wixstatic.com/media/685f9f_dd2cf743449448718f61e1a1cc8deb6c~mv2.png" alt="WDC SRCC Logo"></a>
+        <nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav>
+        <div class="menu-toggle" id="menu-toggle"><span>Menu</span><div class="hamburger"><span></span><span></span><span></span></div></div>
+    </header>
+    <div class="popup-menu" id="popup-menu">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <div class="popup-menu-content"><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav></div>
+    </div>
+
+    <main class="event-page-content">
+        <div class="container">
+            <h1 class="main-title">Annual Symposium Schedule</h1>
+            <p class="intro-text">Our Annual Symposium brought together leaders, students, and academics for a day of insightful discussion and collaborative learning. Below is the schedule of the day's events.</p>
+            <div class="timeline">
+                <div class="timeline-item"><div class="timeline-content"><span class="timeline-time">10:00 AM</span><h3 class="timeline-title">Opening Remarks</h3><p>Welcome address by the President of WDC, SRCC, setting the stage for the day's discussions.</p></div></div>
+                <div class="timeline-item"><div class="timeline-content"><span class="timeline-time">11:00 AM</span><h3 class="timeline-title">Keynote by Dr. Aisha Verma</h3><p>An inspiring talk on "Women in Leadership" and breaking corporate glass ceilings.</p></div></div>
+                <div class="timeline-item"><div class="timeline-content"><span class="timeline-time">01:00 PM</span><h3 class="timeline-title">Panel Discussion</h3><p>A multi-disciplinary panel on the role of policy in achieving gender equity, followed by a Q&A session.</p></div></div>
+                <div class="timeline-item"><div class="timeline-content"><span class="timeline-time">03:00 PM</span><h3 class="timeline-title">Interactive Workshop</h3><p>A hands-on workshop on financial literacy and independence for young women.</p></div></div>
+            </div>
+            <p class="intro-text">The symposium concluded with a networking session, fostering connections and inspiring future collaborations among attendees. The positive feedback highlighted the event's success in promoting meaningful dialogue.</p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 by Women's Development Cell, SRCC. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

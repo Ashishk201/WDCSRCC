@@ -304,6 +304,7 @@ img {
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px;
+    margin-top: 1.5rem; /* Add this line */
 }
 
 .btn:hover {
@@ -620,7 +621,7 @@ img {
 .projects-grid, .publications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 10rem;
 }
 
 .project-item, .publication-item {

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Full-Width Hero Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #fff; }
+        .hero-image {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://placehold.co/1920x1080/A52549/FFFFFF?text=Project+Aasha') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-content h1 {
+            font-family: 'Secular One', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+        .project-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 4rem 2rem;
+        }
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo"><img src="https://static.wixstatic.com/media/685f9f_dd2cf743449448718f61e1a1cc8deb6c~mv2.png" alt="WDC SRCC Logo"></a>
+        <nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav>
+        <div class="menu-toggle" id="menu-toggle"><span>Menu</span><div class="hamburger"><span></span><span></span><span></span></div></div>
+    </header>
+    <div class="popup-menu" id="popup-menu">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <div class="popup-menu-content"><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav></div>
+    </div>
+
+    <main>
+        <section class="hero-image">
+            <div class="hero-content">
+                <h1>Project Aasha</h1>
+            </div>
+        </section>
+        <section class="project-content">
+            <p class="intro-text">Project Aasha is our flagship initiative dedicated to menstrual health and hygiene awareness. We travel to underprivileged communities to conduct workshops and distribute essential sanitary products, empowering women and girls with knowledge and dignity.</p>
+            <div class="gallery">
+                <img src="https://placehold.co/600x400/77111E/FFFFFF?text=Community+Interaction" alt="Community Interaction">
+                <img src="https://placehold.co/600x400/300B15/FFFFFF?text=Workshop+in+Progress" alt="Workshop in Progress">
+                <img src="https://placehold.co/600x400/A52549/FFFFFF?text=Distribution+Drive" alt="Distribution Drive">
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 by Women's Development Cell, SRCC. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

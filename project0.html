@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: The Interview Feature</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #F2EEE5; }
+        .interview-container { max-width: 850px; margin: auto; padding: 4rem 2rem; }
+        .interview-header { display: flex; align-items: center; gap: 2rem; margin-bottom: 3rem; }
+        .interview-header img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
+        .interview-header h1 { font-family: 'Secular One', sans-serif; font-size: 2.5rem; margin: 0; }
+        .interview-header p { font-size: 1.2rem; margin: 0; }
+        .qa-block { margin-bottom: 2.5rem; }
+        .question { font-weight: bold; font-size: 1.3rem; color: var(--primary-color); }
+        .answer { font-size: 1.1rem; line-height: 1.9; }
+        @media (max-width: 600px) {
+            .interview-header { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo"><img src="https://static.wixstatic.com/media/685f9f_dd2cf743449448718f61e1a1cc8deb6c~mv2.png" alt="WDC SRCC Logo"></a>
+        <nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav>
+        <div class="menu-toggle" id="menu-toggle"><span>Menu</span><div class="hamburger"><span></span><span></span><span></span></div></div>
+    </header>
+    <div class="popup-menu" id="popup-menu">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <div class="popup-menu-content"><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav></div>
+    </div>
+
+    <main class="interview-container">
+        <header class="interview-header">
+            <img src="https://placehold.co/300x300/300B15/FFFFFF?text=Headshot" alt="Headshot of the interviewee">
+            <div>
+                <h1>A Conversation with the Project Lead</h1>
+                <p>On the "Art for Empowerment" Initiative</p>
+            </div>
+        </header>
+        
+        <div class="qa-block">
+            <p class="question">What was the inspiration behind this project?</p>
+            <p class="answer">We wanted to create a platform for women to express themselves through art. The idea was to use creativity as a tool for healing, storytelling, and building community among students who might not otherwise connect.</p>
+        </div>
+        <div class="qa-block">
+            <p class="question">What were some of the outcomes?</p>
+            <p class="answer">We hosted a final exhibition that was attended by hundreds of students and faculty. The powerful stories shared through the artwork sparked important conversations about identity and resilience. More importantly, the participants formed a strong, supportive network that has continued long after the project ended.</p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 by Women's Development Cell, SRCC. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

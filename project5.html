@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Two-Column Report</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #F2EEE5; }
+        .report-container { max-width: 1100px; margin: auto; padding: 4rem 2rem; }
+        .report-header { text-align: center; margin-bottom: 4rem; }
+        .report-header h1 { font-family: 'Secular One', sans-serif; font-size: 3.5rem; color: var(--primary-color); }
+        .report-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; }
+        .main-content p { font-size: 1.1rem; line-height: 1.9; }
+        .sidebar { border-left: 3px solid var(--primary-color); padding-left: 2rem; }
+        .sidebar-widget { margin-bottom: 2.5rem; }
+        .sidebar-widget h3 { font-family: 'Secular One', sans-serif; color: var(--secondary-color); }
+        .sidebar-widget ul { list-style: none; padding: 0; }
+        .sidebar-widget li { margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .gallery-grid img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .gallery-grid img:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+        @media (max-width: 900px) {
+            .report-layout { grid-template-columns: 1fr; }
+            .sidebar { border-left: none; border-top: 3px solid var(--primary-color); padding-left: 0; padding-top: 2rem; margin-top: 3rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo"><img src="https://static.wixstatic.com/media/685f9f_dd2cf743449448718f61e1a1cc8deb6c~mv2.png" alt="WDC SRCC Logo"></a>
+        <nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav>
+        <div class="menu-toggle" id="menu-toggle"><span>Menu</span><div class="hamburger"><span></span><span></span><span></span></div></div>
+    </header>
+    <div class="popup-menu" id="popup-menu">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <div class="popup-menu-content"><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav></div>
+    </div>
+
+    <main class="report-container">
+        <header class="report-header">
+            <h1>Financial Literacy Drive</h1>
+            <p>Empowering women with the knowledge to achieve financial independence.</p>
+        </header>
+        <div class="report-layout">
+            <div class="main-content">
+                <h2>Project Overview</h2>
+                <p>The Financial Literacy Drive was a multi-workshop project designed to equip young women with essential financial skills. We covered topics ranging from budgeting and saving to investing and understanding credit. The goal was to demystify personal finance and provide actionable steps towards building a secure financial future.</p>
+                <p>Our sessions were interactive, featuring guest speakers from the finance industry and hands-on activities. The positive feedback highlighted a strong demand for such initiatives, and we plan to expand this project to reach a wider audience in the coming year.</p>
+            </div>
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Key Topics Covered</h3>
+                    <ul>
+                        <li>Budgeting & Saving</li>
+                        <li>Introduction to Investing</li>
+                        <li>Understanding Credit Scores</li>
+                        <li>Navigating Student Loans</li>
+                    </ul>
+                </div>
+                <div class="sidebar-widget">
+                    <h3>Project Impact</h3>
+                    <ul>
+                        <li>200+ Participants</li>
+                        <li>5 Interactive Workshops</li>
+                        <li>95% Positive Feedback</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <p>\n</p>
+            <div class="gallery-grid">
+                <img src="https://placehold.co/500x350/A52549/FFFFFF?text=Participant+1" alt="Student trying the simulator">
+                <img src="https://placehold.co/500x350/77111E/FFFFFF?text=Team+Explaining" alt="WDC team explaining the device">
+                <img src="https://placehold.co/500x350/300B15/FFFFFF?text=Group+Reaction" alt="Group of students reacting">
+            </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 by Women's Development Cell, SRCC. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

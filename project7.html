@@ -3,31 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event: Pad Distribution Drive</title>
+    <title>Project: The Impact Report</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
     <style>
-        /* Styles specific to this layout */
         body { background-color: #F2EEE5; }
+        .impact-container { max-width: 900px; margin: auto; padding: 4rem 2rem; }
+        .impact-header { text-align: center; margin-bottom: 4rem; }
+        .impact-header h1 { font-family: 'Secular One', sans-serif; font-size: 3.5rem; color: var(--primary-color); }
         .feature-header { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
         .header-image { background-image: url('https://placehold.co/1000x800/300B15/FFFFFF?text=Group+Photo'); background-size: cover; background-position: center; height: 100%; }
         .header-text { background-color: #77111E; color: white; padding: 4rem; }
         .header-text h1 { font-family: 'Secular One', sans-serif; font-size: 3.5rem; line-height: 1.1; margin-top: 0; margin-bottom: 1rem; }
         .header-text p { font-size: 1.1rem; line-height: 1.8; max-width: 500px; }
-        .content-section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
-        .content-section h2 { text-align: center; font-family: 'Secular One', sans-serif; font-size: 2.5rem; color: #A52549; }
-        .content-section p { text-align: center; max-width: 800px; margin: 1rem auto 0; font-size: 1.1rem; line-height: 1.7; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-        .gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        
-        /* Responsive Fixes */
-        @media (max-width: 800px) {
-            .feature-header { grid-template-columns: 1fr; }
-            .header-image { min-height: 300px; order: -1; }
-            .header-text { padding: 3rem 1.5rem; } /* Reduced padding */
-            .header-text h1 { font-size: 2.5rem; } /* Reduced font size */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            margin: 4rem 0;
+        }
+        .stat h2 { font-size: 4rem; color: var(--secondary-color); margin: 0; }
+        .stat p { font-weight: bold; }
+        .report-body p { font-size: 1.1rem; line-height: 1.9; }
+        blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1.5rem;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 2rem 0;
         }
     </style>
 </head>
@@ -42,7 +48,6 @@
         <div class="popup-menu-content"><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav></div>
     </div>
 
-    <main>
         <div class="feature-header">
             <div class="header-image"></div>
             <div class="header-text">
@@ -50,14 +55,34 @@
                 <p>Our drives play a vital role in empowering women and girls, ensuring that lack of access to sanitary products does not become a barrier to education or dignity. These initiatives contribute to a healthier, more equitable society.</p>
             </div>
         </div>
-        <div class="content-section">
-            <h2>Our Mission in Action</h2>
-            <p>Here, you can elaborate on the goals of the drive. Discuss the communities you visited, the number of people you reached, and the partnerships you formed. This is a great place to highlight the real-world impact of your work.</p>
-            <div class="gallery">
-                <img src="https://placehold.co/600x400/A52549/FFFFFF?text=Community+Interaction" alt="Volunteers interacting with community members">
-                <img src="https://placehold.co/600x400/77111E/FFFFFF?text=Distribution+in+Progress" alt="Distributing sanitary pads">
-                <img src="https://placehold.co/600x400/300B15/FFFFFF?text=Awareness+Session" alt="An awareness session being conducted">
+        
+
+    
+    <main class="impact-container">
+        
+        <header class="impact-header">
+            <h1>Annual Outreach Program: Impact Report</h1>
+        </header>
+        <div class="report-body">
+            <p>Our Annual Outreach Program aims to extend our initiatives beyond the college campus. This year, we partnered with several local schools to conduct workshops on gender sensitization and leadership for young students.</p>
+        </div>
+        <div class="stats-bar">
+            <div class="stat">
+                <h2>10+</h2>
+                <p>Schools Visited</p>
             </div>
+            <div class="stat">
+                <h2>500+</h2>
+                <p>Students Engaged</p>
+            </div>
+            <div class="stat">
+                <h2>30+</h2>
+                <p>Volunteers Involved</p>
+            </div>
+        </div>
+        <div class="report-body">
+            <blockquote>"The session was very informative... Such events not only provide knowledge but a hope for social change."<br>- School Principal</blockquote>
+            <p>The program was a resounding success, fostering important conversations and inspiring students to become future leaders. The feedback from both students and faculty was overwhelmingly positive, and we are excited to build on this momentum for next year's program.</p>
         </div>
     </main>
 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: The Editorial Read</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #fff; color: #333; }
+        .article-container { max-width: 800px; margin: auto; padding: 4rem 2rem; }
+        .article-header { text-align: center; margin-bottom: 3rem; }
+        .article-header h1 { font-family: 'Secular One', sans-serif; font-size: 3.2rem; line-height: 1.2; color: var(--dark-color); }
+        .article-header .subtitle { font-size: 1.3rem; color: #777; margin-top: 1rem; }
+        .article-body p { font-size: 1.2rem; line-height: 2; margin-bottom: 2rem; }
+        .article-body .drop-cap::first-letter {
+            font-size: 4rem;
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+            font-family: 'Secular One', sans-serif;
+        }
+        .full-bleed-image {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            height: 50vh;
+            object-fit: cover;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo"><img src="https://static.wixstatic.com/media/685f9f_dd2cf743449448718f61e1a1cc8deb6c~mv2.png" alt="WDC SRCC Logo"></a>
+        <nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav>
+        <div class="menu-toggle" id="menu-toggle"><span>Menu</span><div class="hamburger"><span></span><span></span><span></span></div></div>
+    </header>
+    <div class="popup-menu" id="popup-menu">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <div class="popup-menu-content"><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav></div>
+    </div>
+
+    <main>
+        <article class="article-container">
+            <header class="article-header">
+                <h1>Research Wing: Gender Pay Gap Analysis</h1>
+                <p class="subtitle">An in-depth analysis of the prevailing gender pay gap in India's corporate sector, published by our dedicated Research Wing.</p>
+            </header>
+            <div class="article-body">
+                <p class="drop-cap">Our latest research provides a comprehensive overview of the economic disparities faced by women in the workplace. The study delves into statistical data from various industries, highlighting the systemic issues that contribute to the gender pay gap. We explore factors such as unconscious bias in hiring and promotions, the motherhood penalty, and the underrepresentation of women in high-paying roles and sectors.</p>
+                
+                <img src="https://placehold.co/1200x600/300B15/FFFFFF?text=Data+Visualization" alt="Data visualization chart" class="full-bleed-image">
+                
+                <p>The paper also presents a series of policy recommendations for corporations and government bodies aimed at mitigating these disparities. These include promoting pay transparency, implementing unbiased recruitment processes, and providing better support for working mothers. Our goal is to contribute to academic discourse and drive meaningful policy changes for a more equitable future.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 by Women's Development Cell, SRCC. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

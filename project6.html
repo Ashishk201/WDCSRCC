@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: FAQ & Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #fff; }
+        .faq-container { max-width: 900px; margin: auto; padding: 4rem 2rem; }
+        .faq-header { text-align: center; margin-bottom: 3rem; }
+        .faq-header h1 { font-family: 'Secular One', sans-serif; font-size: 3.5rem; color: var(--primary-color); }
+        .faq-intro { font-size: 1.2rem; line-height: 1.8; margin-bottom: 3rem; }
+        .faq-item { border-bottom: 1px solid #ddd; }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 1.5rem 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after { content: '+'; font-size: 2rem; color: var(--primary-color); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-answer p { padding-bottom: 1.5rem; line-height: 1.8; }
+        .faq-item.active .faq-question::after { content: '−'; }
+        .faq-item.active .faq-answer { max-height: 200px; }
+        #gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        #gallery-grid img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        #gallery-grid img:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo"><img src="https://static.wixstatic.com/media/685f9f_dd2cf743449448718f61e1a1cc8deb6c~mv2.png" alt="WDC SRCC Logo"></a>
+        <nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav>
+        <div class="menu-toggle" id="menu-toggle"><span>Menu</span><div class="hamburger"><span></span><span></span><span></span></div></div>
+    </header>
+    <div class="popup-menu" id="popup-menu">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <div class="popup-menu-content"><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav></div>
+    </div>
+
+    <main class="faq-container">
+        <header class="faq-header">
+            <h1>Campus Safety Initiative</h1>
+        </header>
+        <p class="faq-intro">This initiative aims to improve safety and awareness on campus through workshops, policy advocacy, and resource distribution. Here are some frequently asked questions about the project.</p>
+        
+        <div class="faq-item">
+            <button class="faq-question">What is the main goal of this project?</button>
+            <div class="faq-answer"><p>The primary goal is to create a safer and more inclusive campus environment for all students by addressing issues of harassment, promoting bystander intervention, and improving access to support resources.</p></div>
+            <div class="faq-answer" id="gallery-grid">
+                <img src="https://placehold.co/500x250/A52549/FFFFFF?text=Participant+1" alt="Student trying the simulator">
+                <img src="https://placehold.co/500x250/77111E/FFFFFF?text=Team+Explaining" alt="WDC team explaining the device">
+                <!-- <img src="https://placehold.co/500x350/300B15/FFFFFF?text=Group+Reaction" alt="Group of students reacting"> -->
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Who can participate in the workshops?</button>
+            <div class="faq-answer"><p>All workshops are open to all students of the college, regardless of gender. We encourage everyone to attend to foster a community of shared responsibility.</p></div>
+            <div class="faq-answer" id="gallery-grid">
+                <img src="https://placehold.co/500x250/A52549/FFFFFF?text=Participant+1" alt="Student trying the simulator">
+                <img src="https://placehold.co/500x250/77111E/FFFFFF?text=Team+Explaining" alt="WDC team explaining the device">
+                <!-- <img src="https://placehold.co/500x350/300B15/FFFFFF?text=Group+Reaction" alt="Group of students reacting"> -->
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How are you advocating for policy change?</button>
+            <div class="faq-answer"><p>We are working with the college administration to review and update existing safety policies. Our research team has submitted a proposal with recommendations based on student surveys and best practices from other institutions.</p></div>
+            <div class="faq-answer" id="gallery-grid">
+                <img src="https://placehold.co/500x250/A52549/FFFFFF?text=Participant+1" alt="Student trying the simulator">
+                <img src="https://placehold.co/500x250/77111E/FFFFFF?text=Team+Explaining" alt="WDC team explaining the device">
+                <!-- <img src="https://placehold.co/500x350/300B15/FFFFFF?text=Group+Reaction" alt="Group of students reacting"> -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 by Women's Development Cell, SRCC. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

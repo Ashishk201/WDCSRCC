@@ -3,32 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event: Rise Above the Ribbon</title>
+    <title>Event: Veerangana</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
     <style>
-        /* Styles specific to this layout */
-        body { background-color: #F2EEE5; }
-        .event-page-content { padding: 4rem 2rem; }
-        .container { max-width: 1000px; margin: auto; }
-        .main-title { font-family: 'Secular One', sans-serif; font-size: 3.5rem; text-align: center; color: #A52549; margin-bottom: 5rem; }
-        .event-section { display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2rem; margin-bottom: 6rem; position: relative; }
-        .event-image img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .event-text { background-color: #A52549; color: #FFFFFF; padding: 2rem; border-radius: 8px; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
-        .event-section.right-align .event-text { grid-column: 2 / 3; grid-row: 1 / 2; z-index: 2; transform: translateX(-60px); }
-        .event-section.right-align .event-image { grid-column: 1 / 2; grid-row: 1 / 2; }
-        .event-section.left-align .event-text { grid-column: 1 / 2; grid-row: 1 / 2; z-index: 2; transform: translateX(60px); }
-        .event-section.left-align .event-image { grid-column: 2 / 3; grid-row: 1 / 2; }
-        .event-text h2 { font-family: 'Secular One', sans-serif; margin-top: 0; font-size: 1.8rem; }
-        .final-text { text-align: center; font-size: 1.1rem; line-height: 1.8; max-width: 800px; margin: 4rem auto 0; }
-        @media (max-width: 768px) {
-            .event-section { grid-template-columns: 1fr; }
-            .event-section.right-align .event-text, .event-section.left-align .event-text { transform: none; grid-column: auto; grid-row: auto; }
-            .event-section.right-align .event-image { grid-column: auto; grid-row: auto; order: -1; }
+    /* Styles specific to this layout */
+    body { background-color: #F2EEE5; }
+    .event-page-content { padding: 4rem 2rem; }
+    .container { max-width: 1000px; margin: auto; }
+    .main-title { font-family: 'Secular One', sans-serif; font-size: 3.5rem; text-align: center; color: #A52549; margin-bottom: 5rem; }
+    .event-section { display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2rem; margin-bottom: 6rem; position: relative; }
+    .event-image img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .event-text { background-color: #A52549; color: #FFFFFF; padding: 2.5rem; border-radius: 8px; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+    
+    /* Desktop styles for the overlap effect */
+    .event-section.right-align .event-text { grid-column: 2 / 3; grid-row: 1 / 2; z-index: 2; transform: translateX(-40px); }
+    .event-section.right-align .event-image { grid-column: 1 / 2; grid-row: 1 / 2; }
+    .event-section.left-align .event-text { grid-column: 1 / 2; grid-row: 1 / 2; z-index: 2; transform: translateX(40px); }
+    .event-section.left-align .event-image { grid-column: 2 / 3; grid-row: 1 / 2; }
+    
+    .event-text h2 { font-family: 'Secular One', sans-serif; margin-top: 0; font-size: 1.8rem; }
+    .final-text { text-align: center; font-size: 1.1rem; line-height: 1.8; max-width: 800px; margin: 4rem auto 0; }
+
+    /* --- FINAL RESPONSIVE FIX --- */
+    @media (max-width: 768px) {
+        .event-page-content { padding: 4rem 1rem; }
+        .main-title { font-size: 2.8rem; margin-bottom: 4rem; }
+
+        /* Stacks the grid to a single column */
+        .event-section {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
         }
-    </style>
+
+        /* This is the key fix. By targeting the .right-align and .left-align classes 
+          specifically, these rules are now strong enough to override the desktop styles.
+        */
+        .event-section.right-align .event-text,
+        .event-section.left-align .event-text {
+            transform: none;    /* Removes the overlap */
+            grid-column: 1;     /* Resets to the first column */
+            grid-row: 2;        /* Moves text below the image */
+        }
+
+        .event-section.right-align .event-image,
+        .event-section.left-align .event-image {
+            grid-column: 1;     /* Resets to the first column */
+            grid-row: 1;        /* Moves image to the top */
+        }
+    }
+</style>
 </head>
 <body>
     <header class="main-header">
@@ -53,7 +79,7 @@
 
     <main class="event-page-content">
         <div class="container">
-            <h1 class="main-title">RISE ABOVE THE RIBBON</h1>
+            <h1 class="main-title">Veerangana</h1>
             <div class="event-section right-align">
                 <div class="event-text">
                     <h2>22nd October 2024</h2>

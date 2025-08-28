@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Timeline Narrative</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #F2EEE5; }
+        .timeline-container { max-width: 900px; margin: auto; padding: 4rem 2rem; }
+        .timeline-header { text-align: center; margin-bottom: 4rem; }
+        .timeline-header h1 { font-family: 'Secular One', sans-serif; font-size: 3.5rem; color: var(--primary-color); }
+        .timeline { position: relative; }
+        .timeline::before { content: ''; position: absolute; top: 0; left: 15px; height: 100%; width: 4px; background: #ddd; }
+        .timeline-entry { position: relative; margin-bottom: 3rem; padding-left: 50px; }
+        .timeline-entry::before { content: ''; position: absolute; left: 0; top: 0; width: 34px; height: 34px; background: var(--primary-color); border-radius: 50%; border: 4px solid #F2EEE5; }
+        .timeline-date { font-weight: bold; font-size: 1.2rem; color: var(--secondary-color); }
+        .timeline-title { font-family: 'Secular One', sans-serif; font-size: 1.8rem; margin: 0.5rem 0; }
+        .timeline-body p { line-height: 1.8; }
+        .feature-header { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+        .header-image { background-image: url('https://placehold.co/1000x800/300B15/FFFFFF?text=Group+Photo'); background-size: cover; background-position: center; height: 100%; }
+        .header-text { background-color: #77111E; color: white; padding: 4rem; }
+        .header-text h1 { font-family: 'Secular One', sans-serif; font-size: 3.5rem; line-height: 1.1; margin-top: 0; margin-bottom: 1rem; }
+        .header-text p { font-size: 1.1rem; line-height: 1.8; max-width: 500px; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo"><img src="https://static.wixstatic.com/media/685f9f_dd2cf743449448718f61e1a1cc8deb6c~mv2.png" alt="WDC SRCC Logo"></a>
+        <nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav>
+        <div class="menu-toggle" id="menu-toggle"><span>Menu</span><div class="hamburger"><span></span><span></span><span></span></div></div>
+    </header>
+    <div class="popup-menu" id="popup-menu">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <div class="popup-menu-content"><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Our Team</a></li><li><a href="events.html">Events</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li></ul></nav></div>
+    </div>
+
+    <div class="feature-header">
+        <div class="header-image"></div>
+        <div class="header-text">
+            <h1>Pad Distribution Drive</h1>
+            <p>Our drives play a vital role in empowering women and girls, ensuring that lack of access to sanitary products does not become a barrier to education or dignity. These initiatives contribute to a healthier, more equitable society.</p>
+        </div>
+    </div>
+
+    <main class="timeline-container">
+        <header class="timeline-header">
+            <h1>"Beyond Pink" Magazine Launch</h1>
+        </header>
+        <div class="timeline">
+            <div class="timeline-entry">
+                <div class="timeline-date">Phase 1: Conception</div>
+                <h2 class="timeline-title">Ideation and Team Formation</h2>
+                <div class="timeline-body"><p>The project began with brainstorming sessions to define the magazine's theme and vision. A dedicated editorial and design team was formed from student volunteers.</p></div>
+            </div>
+            <div class="timeline-entry">
+                <div class="timeline-date">Phase 2: Content Creation</div>
+                <h2 class="timeline-title">Call for Submissions & Editing</h2>
+                <div class="timeline-body"><p>A call for articles, poetry, and artwork was sent out to the student body. The editorial team then curated and edited the submissions to ensure high quality and thematic coherence.</p></div>
+            </div>
+            <div class="timeline-entry">
+                <div class="timeline-date">Phase 3: Launch & Distribution</div>
+                <h2 class="timeline-title">Magazine Launch Event</h2>
+                <div class="timeline-body"><p>The magazine was launched at a special event featuring readings from contributors. Digital and print copies were distributed across campus, receiving excellent feedback for its insightful content and design.</p></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 by Women's Development Cell, SRCC. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
